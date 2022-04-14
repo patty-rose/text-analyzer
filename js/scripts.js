@@ -29,8 +29,8 @@ function numberOfOccurrencesInText(word,text) {
   wordArray.forEach(function(element) {
     if (element.toLowerCase().includes(word.toLowerCase())) {
     wordCount++;
-  }
-});
+    }
+  });
   return wordCount;
 };
 
@@ -51,7 +51,27 @@ function boldPassage(word, text) {
     }
   });
   return htmlString + "</p>";
+};
+
+function commonWordsCount(text) {
+  const wordArray = text.split(" ");
+  let wordDict = {};
+  wordArray.forEach(function(element) {
+    wordCount = 0
+    wordArray.forEach(function(word) {
+      if(word === element){
+        wordCount++
+      }
+    });
+    wordDict[element] = wordCount;
+  });
+  console.log(wordDict);
 }
+
+//split into an array
+//define a new object let wordDict = new object {};
+//forEach loop through the wordArray and  log word count
+//wordDict[element] = wordCount
 
 // UI Logic
 $(document).ready(function(){

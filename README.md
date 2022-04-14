@@ -97,3 +97,17 @@ const word = "hello";
 const text = "hello there";
 boldPassage(word, text);
 Expected Output: "<p><b>hello</b> there</p>"
+
+Describe: commonWordsCount()
+
+Test: "It should return the correct number of words in a string" 
+Code:
+const text = "Hi hey hello";
+commonWordsCount(text);
+Expected Output: 3
+
+Test: "It should return the length of the array which should match the number of words in the text"
+Code:
+const text= "Hi hey hello";
+commonWordsCount(text);
+Expected Output: 3
